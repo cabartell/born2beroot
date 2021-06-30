@@ -16,7 +16,7 @@ Check if *sudo* was installed successfully with
 $ apt-cache policy sudo
 ```
 
-### 2: Add user to *sudo* group
+### Add user to *sudo* group
 Add `<username>` to *sudo* group with
 ```
 $ adduser <username> sudo  

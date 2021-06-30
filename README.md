@@ -1,4 +1,4 @@
-# Born2beRoot
+# Born2beRoot Guide
 
 ## Prerequisites
 The VM is setup with partitions correctly and is working

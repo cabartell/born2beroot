@@ -45,7 +45,7 @@ Configure *ssh* with
 ```
 $ sudo nano /etc/ssh/sshd_config
 ```
-Replace `#Port 22` with `Port 4242` to only allow connections through port 4242 
+Replace `#Port 22` with `Port 4242` to only allow connections through port 4242      
 Set `#PermitRootLogin` to `no` 
 
 To disable *ssh* login as root. 
@@ -58,7 +58,7 @@ Install *ufw* with
 ```
 $ sudo apt install ufw
 ```
-Check the installation success with `dpkg -l | grep ufw`. 
+Check the installation success with `dpkg -l | grep ufw`.      
 Enable UFW:
 ```
 $ sudo ufw enable
@@ -78,8 +78,8 @@ Change the policy with
 ```
 $ sudo nano /etc/login.defs
 ```
-Set `PASS_MAX_DAYS` to `30` to let passwords expire every 30 days
-Set `PASS_MIN_DAYS` to `2` to enforce two days between password changes.
+Set `PASS_MAX_DAYS` to `30` to let passwords expire every 30 days     
+Set `PASS_MIN_DAYS` to `2` to enforce two days between password changes.     
 
 ### Define Strength
 Install the *libpam-pwquality* package with

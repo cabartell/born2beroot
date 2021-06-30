@@ -34,60 +34,46 @@ Now you can use `sudo` instead if switching to root.
 
 ## Setting up SSH
 
-### 1: Installing SSH
+### Install & Configure SSH
 Install *openssh-server* with
 ```
 $ sudo apt install openssh-server
 ```
->Make sure the installation was successful with `dpgk -l | grep ssh` or `apt-cache policy openssh-server`.
+Check if installation was successful with `apt-cache policy openssh-server`.
 
-### 2: Configuring SSH
 Configure *ssh* with
 ```
 $ sudo nano /etc/ssh/sshd_config
 ```
-Replace
-```
-#Port 22
-```
-with
-```
-Port 4242
-```
-to only allow connections through port 4242 and replace
-```
-#PermitRootLogin prohibit-password
-```
-with
-```
-PermitRootLogin no
-```
-to disable *ssh* login as root. 
->Verify the *ssh* status with `sudo service ssh status`. 
+Replace `#Port 22` with `Port 4242` to only allow connections through port 4242 
+Set `#PermitRootLogin` to `no` 
 
-## UFW
+To disable *ssh* login as root. 
+Check *ssh* status with `sudo service ssh status`. 
 
-### 1: Installing UFW
+## Set up UncomplicatedFireWall (UFW)
+
+### Install UFW
 Install *ufw* with
 ```
 $ sudo apt install ufw
 ```
->Check if the installation was successful with `dpkg -l | grep ufw`. 
-Start *ufw* with
+Check the installation success with `dpkg -l | grep ufw`. 
+Enable UFW:
 ```
 $ sudo ufw enable
 ```
 
-### 2: Configuring UFW
-Allow *ssh* connections through Port 4242 with
+### Configure UFW
+Allow *ssh* connections through Port 4242:
 ```
 $ sudo ufw allow 4242
 ```
->Verify the status with `sudo ufw status`.
+Verify UFW status: `sudo ufw status`.
 
 ## Password Policy
 
-### 1: Expiration
+### Set Expiration
 Change the policy with
 ```
 $ sudo nano /etc/login.defs
@@ -95,7 +81,7 @@ $ sudo nano /etc/login.defs
 Set `PASS_MAX_DAYS` to `30` to let passwords expire every 30 days
 Set `PASS_MIN_DAYS` to `2` to enforce two days between password changes.
 
-### 2: Strength
+### Define Strength
 Install the *libpam-pwquality* package with
 ```
 $ sudo apt install libpam-pwquality

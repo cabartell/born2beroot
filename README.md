@@ -32,7 +32,7 @@ $ getent group sudo
 Now `reboot`and login.
 Now you can use `sudo` instead if switching to root. 
 
-## Setting up SSH
+## Set up SSH
 
 ### Install & Configure SSH
 Install *openssh-server* with
@@ -46,9 +46,7 @@ Configure *ssh* with
 $ sudo nano /etc/ssh/sshd_config
 ```
 Replace `#Port 22` with `Port 4242` to only allow connections through port 4242      
-Set `#PermitRootLogin` to `no` 
-
-To disable *ssh* login as root. 
+Set `#PermitRootLogin` to `no` to disable *ssh* login as root. 
 Check *ssh* status with `sudo service ssh status`. 
 
 ## Set up UncomplicatedFireWall (UFW)

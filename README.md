@@ -117,10 +117,9 @@ $ sudo adduser <username> user42
 Check the group with `getent group user42`.
 
 ## Configure sudo group
-To configure the sudo group create a file containing rules in /etc/sudoers.d/ with `sudo vi /etc/sudoers.d/<filename> ` 
-The filename must not end with ~ or contain ..
+To configure the sudo group rules create a file in /etc/sudoers.d/ with `sudo vi /etc/sudoers.d/<filename> ` 
 
-Add the following rules in <filename>:
+Add the following rules in your file:
 
 ```
 Defaults        passwd_tries=3

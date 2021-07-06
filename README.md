@@ -116,3 +116,21 @@ $ sudo adduser <username> user42
 ```
 Check the group with `getent group user42`.
 
+## Configure sudo group
+To configure the sudo group create a file containing rules in /etc/sudoers.d/ with `sudo vi /etc/sudoers.d/<filename> ` 
+The filename must not end with ~ or contain ..
+
+Add the following rules in <filename>:
+
+```
+Defaults        passwd_tries=3
+Defaults        badpass_message="<your error message>"
+Defaults        logfile="/var/log/sudo/<filename>" 
+Defaults        iolog_dir="/var/log/sudo"
+Defaults        log_input,log_output
+Defaults        requiretty
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+```
+
+The sudo folder and logfile will automatically be created
+

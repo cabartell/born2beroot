@@ -1,6 +1,6 @@
 # Eval Notes
 [Evaluation Sheet](https://github.com/cabartell/born2beroot/files/7110175/Intra_Projects_Born2beroot_Edit.1.pdf)    
-connect via SSH; `ssh -p 4242 cbartell@192.168.178.141` and `exit` to quit    
+connect via SSH; `ssh -p <port> <user>@<ip>` and `exit` to quit    
 
 ## Project Overview
 - **How does a virtual machine work?**    

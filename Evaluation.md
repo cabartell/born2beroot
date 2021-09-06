@@ -76,7 +76,7 @@ sudo reboot
 ```
 lsblk
 ```
-- **What is LVM, how does it work?**
+- **What is LVM, how does it work?**    
 LVM stands for Logical Volume Management. It is a system of managing logical volumes, or filesystems, that is much more advanced and flexible than the traditional method of partitioning a disk into one or more segments and formatting that partition with a filesystem.    
 A **Volume Group** is a named collection of physical and logical volumes. Typical systems only need one Volume Group to contain all of the physical and logical volumes on the system    
 
@@ -109,9 +109,6 @@ sudo cat /var/log/sudo/log
 - **List active rules in UFW. A rule for port 4242 must exist**
 Port 68 = Bootstrap Protocol
 ```
-ss -tunlp
-```
-```
 sudo /usr/sbin/ufw status
 ```
 - **add new rules to open port 8080**   
@@ -135,6 +132,10 @@ apt-cache policy openssh-server
 - **check it's working**   
 ```
 sudo service ssh status
+```
+- **check it's only on port 4242**
+```
+ss -tunlp
 ```
 
 

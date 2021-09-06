@@ -107,6 +107,22 @@ sudo cat /var/log/sudo/log
 - **check UFW is working**
 - **what is UFW and what's it good for?**
 - **List active rules in UFW. A rule for port 4242 must exist**
+Port 68 = Bootstrap Protocol
+```
+ss -tunlp
+```
+```
+sudo /usr/sbin/ufw status
+```
 - **add new rules to open port 8080**
+```
+sudo ufw allow 8080
+```
 - **check the new rule is added by listing active rules**
+```
+sudo /usr/sbin/ufw status
+```
 - **delete the new rule for port 8080**
+```
+sudo ufw delete <rulenumber>
+```

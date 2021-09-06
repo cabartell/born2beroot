@@ -1,6 +1,7 @@
 # Eval Notes
 [Evaluation Sheet](https://github.com/cabartell/born2beroot/files/7110175/Intra_Projects_Born2beroot_Edit.1.pdf)    
 connect via SSH; `ssh -p <port> <user>@<ip>` and `exit` to quit    
+ThisPr0jectSucks!
 
 ## Project Overview
 - **How does a virtual machine work?**    

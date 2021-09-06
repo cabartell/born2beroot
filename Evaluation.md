@@ -11,6 +11,7 @@ A virtual machine (VM) is a virtual environment that works like a computer withi
 Debian - because I've used it before xD My friend said CentOS is a PITA
 
 - **Basic differences between CentOS and Debian**    
+
 - **The purpose of VMs**    
 - **Difference between aptitude and apt**    
 - **What is APPArmor?**    
@@ -102,4 +103,10 @@ sudo cat /var/log/sudo/log
 ```
 
 ## UFW
-- **check UFW**
+- **check UFW is installed**
+- **check UFW is working**
+- **what is UFW and what's it good for?**
+- **List active rules in UFW. A rule for port 4242 must exist**
+- **add new rules to open port 8080**
+- **check the new rule is added by listing active rules**
+- **delete the new rule for port 8080**

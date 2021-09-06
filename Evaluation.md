@@ -54,7 +54,7 @@ groups <username>
 ```
 - find the password rules
 ```
-cat /etc/pam.d/common-password
+sudo cat /etc/pam.d/common-password
 ```
 - find the sudo rules
 ```

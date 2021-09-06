@@ -36,4 +36,27 @@ cat /etc/os-release
 ```
 groups cbartell
 ```
-- ****    
+- **create new user**    
+```
+sudo adduser <username>
+```
+- **add group**
+```
+sudo addgroup evaluating
+```
+- **add new user to group**
+```
+sudo adduser <username> evaluating
+```
+- **check**
+```
+groups <username>
+```
+- find the password rules
+```
+cat /etc/pam.d/common-password
+```
+- find the sudo rules
+```
+sudo cat /etc/sudoers.d/config
+```

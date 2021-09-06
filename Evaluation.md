@@ -114,15 +114,27 @@ ss -tunlp
 ```
 sudo /usr/sbin/ufw status
 ```
-- **add new rules to open port 8080**
+- **add new rules to open port 8080**   
 ```
 sudo ufw allow 8080
 ```
-- **check the new rule is added by listing active rules**
+- **check the new rule is added by listing active rules**   
 ```
 sudo /usr/sbin/ufw status
 ```
-- **delete the new rule for port 8080**
+- **delete the new rule for port 8080**   
 ```
 sudo ufw delete <rulenumber>
 ```
+
+## SSH
+- **Check SSH service is installed**   
+```
+apt-cache policy openssh-server
+```
+- **check it's working**   
+```
+sudo service ssh status
+```
+
+

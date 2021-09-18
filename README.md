@@ -134,6 +134,6 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 The sudo folder and logfile will automatically be created
 
 ## Set up cron job    
-Configure cron with `sudo crontab -u root -e` and replace `# m h  dom mon dow   command` with `*/10 * * * * sh /path/to/script` to run script every ten minutes.
+Configure cron with `sudo crontab -u root -e` and replace `# m h  dom mon dow   command` with `*/10 * * * * /path/to/script` to run script every ten minutes.
 
 Check your cron jobs with `sudo crontab -u root -l.`
